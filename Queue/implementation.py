@@ -87,7 +87,6 @@ queue.enqueue(1);
 queue.enqueue(3);
 queue.enqueue(6);
 print("--", queue.dequeue());
-print("queue.isEmpty()", queue.isEmpty());
 queue.clear();
 print("queue.isEmpty()", queue.isEmpty());
 queue.printQueue();
