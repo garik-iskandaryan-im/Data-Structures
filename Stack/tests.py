@@ -2,11 +2,11 @@ import time;
 from implementation import Stack;
 
 stack = Stack();
-pushStartTime = round(time.time()) * 1000;
+pushStartTime = time.time();
 for i in range(100000):
     stack.push(i);
-pushEndTime = round(time.time()) * 1000;
-print("push 100000 integer: time = ", pushEndTime - pushStartTime, "milliseconds");
+pushEndTime = time.time();
+print("push 100000 integer: time = ", round((pushEndTime - pushStartTime) * 1000), "milliseconds");
 print("isEmpty()", stack.isEmpty());
 print("length()", stack.length());
 print("dequeue()", stack.pop());

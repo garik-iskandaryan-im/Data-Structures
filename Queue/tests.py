@@ -2,11 +2,11 @@ import time;
 from implementation import Queue;
 
 queue = Queue();
-enqueueStartTime = round(time.time() * 1000);
+enqueueStartTime = time.time();
 for i in range(100000):
     queue.enqueue(i);
-enqueueEndTime = round(time.time() * 1000);
-print("enqueue 100000 integer time = ", enqueueEndTime - enqueueStartTime, "milliseconds");
+enqueueEndTime = time.time();
+print("enqueue 100000 integer time = ", round((enqueueEndTime - enqueueStartTime) * 1000), "milliseconds");
 print("isEmpty()", queue.isEmpty());
 print("length()", queue.length());
 print("dequeue()", queue.dequeue());

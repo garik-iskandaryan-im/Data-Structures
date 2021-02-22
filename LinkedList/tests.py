@@ -2,11 +2,11 @@ import time;
 from implementation import LinkedList;
 
 linkedList = LinkedList();
-linkedListStartTime = round(time.time()) * 1000;
+linkedListStartTime = time.time();
 for i in range(10000):
     linkedList.add(i);
-linkedListEndTime = round(time.time()) * 1000;
-print("push 10000 integer: time = ", linkedListEndTime - linkedListStartTime, "milliseconds");
+linkedListEndTime = time.time();
+print("push 10000 integer: time = ", round((linkedListEndTime - linkedListStartTime) * 1000), "milliseconds");
 print("isEmpty()", linkedList.isEmpty());
 print("length()", linkedList.length());
 print("getLast()", linkedList.getLast());
